@@ -5,7 +5,7 @@ class Zvire {
     }
 
     vydejZvuk() {
-        console.log(`${this.jmeno} vydává zvuk: ${this.zvuk}`);
+        return (`${this.jmeno} vydává zvuk: ${this.zvuk}`);
     }
 
     vratJmenoZvirete() {
@@ -19,7 +19,7 @@ class Kocka extends Zvire {
     }
 
     ulovMys() {
-        console.log(`${this.jmeno} hledá myš a loví.`)
+        return (`${this.jmeno} hledá myš a loví.`)
     }
 }
 
@@ -30,7 +30,7 @@ class Pes extends Zvire {
     }
 
     hlidejDum() {
-        console.log(`${this.jmeno} hlídá dům`);
+        return (`${this.jmeno} hlídá dům`);
     }
 }
 
@@ -41,8 +41,8 @@ function vytvorKocku() {
     const kocka = new Kocka("Micka");
 
     document.getElementById("vystup").innerHTML =
-        `<p>${kocka.vydejZvuk()}</p>`;
-    `<p>${kocka.ulovMys()}</p>`;
+        `<p>${kocka.vydejZvuk()}</p>
+        <p>${kocka.ulovMys()}</p>`;
 }
 
 //Fukce pro vytvoření kočky a zobrazení její akce
@@ -50,7 +50,7 @@ function vytvorPsa() {
     const pes = new Pes("Rex");
 
     document.getElementById("vystup").innerHTML =
-        `<p>${pes.vydejZvuk()}</p>`;
-    `<p>${pes.hlidejDum()}</p>`;
+        `<p>${pes.vydejZvuk()}</p>
+        <p>${pes.hlidejDum()}</p>`;
 }
 
